@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Rights - Discover Central & Tamil Nadu Government welfare schemes you are eligible for. Check eligibility, find schemes, and apply online.">
+  <title>My Rights — Find Government Schemes You Are Eligible For</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" id="logo-link" onclick="showPage('home')">
+        <div class="logo__icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="24" fill="url(#logo-grad)"/>
+            <path d="M24 8c-1.5 0-3 .5-4 1.5-2 2-2 5 0 7l1.5 1.5c.5.5 1 1.2 1 2v3c0 .5.2 1 .5 1.4l1.5 2c.3.4.8.6 1.3.6h.4c.5 0 1-.2 1.3-.6l1.5-2c.3-.4.5-.9.5-1.4v-3c0-.8.4-1.5 1-2L31 16.5c2-2 2-5 0-7-1-1-2.5-1.5-4-1.5h-3z" fill="white" opacity="0.9"/>
+            <path d="M14 24c0 1 .5 2 1.5 2.5l4 2c.5.3 1 .8 1 1.5v4c0 .8.5 1.5 1.2 1.8l2.3 1c.3.1.7.2 1 .2s.7-.1 1-.2l2.3-1c.7-.3 1.2-1 1.2-1.8v-4c0-.7.4-1.2 1-1.5l4-2c1-.5 1.5-1.5 1.5-2.5s-.5-2-1.5-2.5L24 17l-8.5 4.5C14.5 22 14 23 14 24z" fill="white"/>
+            <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#1a56db"/><stop offset="1" stop-color="#0ea770"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="logo__text">
+          <span class="logo__title">My Rights</span>
+          <span class="logo__tagline">Find Schemes You Deserve</span>
+        </div>
+      </a>
+      <nav class="nav" id="main-nav">
+        <a href="#" class="nav__link active" data-page="home" onclick="showPage('home')">Home</a>
+        <a href="#" class="nav__link" data-page="eligibility" onclick="showPage('eligibility')">Find Schemes</a>
+        <a href="#" class="nav__link" data-page="all-schemes" onclick="showPage('all-schemes')">All Schemes</a>
+        <a href="#" class="nav__link" data-page="about" onclick="showPage('about')">About</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HOME PAGE ===== -->
+  <main id="page-home" class="page active">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg-shapes">
+        <div class="shape shape--1"></div>
+        <div class="shape shape--2"></div>
+        <div class="shape shape--3"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge">🏛️ Government Welfare Portal</div>
+          <h1 class="hero__title">Discover Government Schemes <span class="gradient-text">Easily</span></h1>
+          <p class="hero__desc">This platform helps citizens identify Central and Tamil Nadu government schemes based on their eligibility. Find the benefits you deserve in just a few steps.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg" onclick="showPage('eligibility')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              Check Eligibility
+            </button>
+            <button class="btn btn--outline btn--lg" onclick="showPage('all-schemes')">Browse All Schemes</button>
+          </div>
+          <div class="hero__stats">
+            <div class="stat"><span class="stat__number" id="stat-schemes">55+</span><span class="stat__label">Schemes</span></div>
+            <div class="stat"><span class="stat__number">2</span><span class="stat__label">Governments</span></div>
+            <div class="stat"><span class="stat__number">10+</span><span class="stat__label">Categories</span></div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero-card hero-card--1">
+            <div class="hero-card__icon">🎓</div>
+            <div class="hero-card__text">Education Schemes</div>
+          </div>
+          <div class="hero-card hero-card--2">
+            <div class="hero-card__icon">👩‍⚕️</div>
+            <div class="hero-card__text">Health Insurance</div>
+          </div>
+          <div class="hero-card hero-card--3">
+            <div class="hero-card__icon">🌾</div>
+            <div class="hero-card__text">Farmer Support</div>
+          </div>
+          <div class="hero-card hero-card--4">
+            <div class="hero-card__icon">💼</div>
+            <div class="hero-card__text">Employment Aid</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section categories" id="categories-section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Explore By <span class="gradient-text">Category</span></h2>
+          <p class="section__desc">Browse government schemes across various categories</p>
+        </div>
+        <div class="cat-grid" id="cat-grid"></div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">How It <span class="gradient-text">Works</span></h2>
+          <p class="section__desc">Three simple steps to find your eligible schemes</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-card__number">1</div>
+            <div class="step-card__icon">📝</div>
+            <h3>Select Age Group</h3>
+            <p>Choose your age category to get started with the eligibility checker.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__number">2</div>
+            <div class="step-card__icon">📋</div>
+            <h3>Fill Your Details</h3>
+            <p>Provide basic information like age, gender, occupation, and income.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__number">3</div>
+            <div class="step-card__icon">✅</div>
+            <h3>Get Results</h3>
+            <p>Instantly see all government schemes you are eligible for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Schemes -->
+    <section class="section featured">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Featured <span class="gradient-text">Schemes</span></h2>
+          <p class="section__desc">Popular government schemes benefiting millions of citizens</p>
+        </div>
+        <div class="schemes-grid" id="featured-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ELIGIBILITY PAGE ===== -->
+  <main id="page-eligibility" class="page">
+    <section class="section eligibility-section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Eligibility <span class="gradient-text">Checker</span></h2>
+          <p class="section__desc">Answer a few questions to discover schemes you're eligible for</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-bar" id="progress-bar">
+          <div class="progress-bar__step active" data-step="1"><span>1</span> Age Group</div>
+          <div class="progress-bar__step" data-step="2"><span>2</span> Details</div>
+          <div class="progress-bar__step" data-step="3"><span>3</span> Results</div>
+        </div>
+
+        <!-- Step 1: Age Group -->
+        <div class="form-step active" id="step-1">
+          <h3 class="form-step__title">Select Your Age Group</h3>
+          <div class="age-cards">
+            <div class="age-card" onclick="selectAgeGroup('under3')" id="age-under3">
+              <div class="age-card__emoji">👶</div>
+              <h4>Under 3 Years</h4>
+              <p>Child health, vaccination, nutrition schemes</p>
+            </div>
+            <div class="age-card" onclick="selectAgeGroup('under18')" id="age-under18">
+              <div class="age-card__emoji">🧑‍🎓</div>
+              <h4>Under 18 Years</h4>
+              <p>Scholarships, education, student support schemes</p>
+            </div>
+            <div class="age-card" onclick="selectAgeGroup('above18')" id="age-above18">
+              <div class="age-card__emoji">🧑‍💼</div>
+              <h4>Above 18 Years</h4>
+              <p>Employment, housing, pension, insurance schemes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Form (dynamically filled) -->
+        <div class="form-step" id="step-2">
+          <div class="form-step__header">
+            <button class="btn btn--ghost" onclick="goToStep(1)">← Back</button>
+            <h3 class="form-step__title" id="form-title">Fill Your Details</h3>
+          </div>
+          <form id="eligibility-form" class="elig-form" onsubmit="submitForm(event)">
+            <div id="form-fields"></div>
+            <div class="form-actions">
+              <button type="button" class="btn btn--outline" onclick="goToStep(1)">Back</button>
+              <button type="submit" class="btn btn--primary btn--lg">Find Eligible Schemes</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3: Results -->
+        <div class="form-step" id="step-3">
+          <div class="form-step__header">
+            <button class="btn btn--ghost" onclick="goToStep(2)">← Back to Form</button>
+            <h3 class="form-step__title">Your Eligible Schemes</h3>
+          </div>
+          <div class="results-filters" id="results-filters">
+            <button class="filter-btn active" data-filter="all" onclick="filterResults('all')">All</button>
+            <button class="filter-btn" data-filter="Central" onclick="filterResults('Central')">Central</button>
+            <button class="filter-btn" data-filter="Tamil Nadu" onclick="filterResults('Tamil Nadu')">Tamil Nadu</button>
+            <button class="filter-btn" data-filter="student" onclick="filterResults('student')">Student</button>
+            <button class="filter-btn" data-filter="farmer" onclick="filterResults('farmer')">Farmer</button>
+            <button class="filter-btn" data-filter="women" onclick="filterResults('women')">Women</button>
+            <button class="filter-btn" data-filter="disability" onclick="filterResults('disability')">Disability</button>
+          </div>
+          <div class="results-count" id="results-count"></div>
+          <div class="schemes-grid" id="results-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ALL SCHEMES PAGE ===== -->
+  <main id="page-all-schemes" class="page">
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">All Government <span class="gradient-text">Schemes</span></h2>
+          <p class="section__desc">Browse all Central and Tamil Nadu government welfare schemes</p>
+        </div>
+        <div class="all-schemes-toolbar">
+          <div class="search-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="search-input" placeholder="Search schemes..." oninput="searchSchemes()">
+          </div>
+          <div class="toolbar-filters">
+            <select id="gov-filter" onchange="searchSchemes()">
+              <option value="all">All Governments</option>
+              <option value="Central">Central</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+            </select>
+            <select id="cat-filter" onchange="searchSchemes()">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+        </div>
+        <div class="schemes-grid" id="all-schemes-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ABOUT PAGE ===== -->
+  <main id="page-about" class="page">
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">About <span class="gradient-text">My Rights</span></h2>
+          <p class="section__desc">Empowering citizens with knowledge about their rights and entitlements</p>
+        </div>
+        <div class="about-content">
+          <div class="about-card">
+            <div class="about-card__icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>To bridge the gap between government welfare schemes and eligible citizens by providing an easy-to-use platform that helps people discover benefits they are entitled to.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card__icon">🤝</div>
+            <h3>Who We Help</h3>
+            <p>Students, farmers, women, senior citizens, differently abled persons, and all citizens of India — especially Tamil Nadu — looking for government assistance.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card__icon">⚡</div>
+            <h3>How It Works</h3>
+            <p>Our intelligent eligibility checker matches your profile against 55+ government schemes and instantly shows you only those schemes you qualify for.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card__icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>All data stays in your browser. We do not store, collect, or transmit any personal information. Your privacy is our priority.</p>
+          </div>
+        </div>
+        <div class="disclaimer">
+          <h3>⚠️ Disclaimer</h3>
+          <p>This platform is an informational tool only. The scheme information is compiled from official government sources and may change. Users are advised to verify details on official government websites before applying. My Rights is not affiliated with any government body.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== SCHEME DETAIL MODAL ===== -->
+  <div class="modal-overlay" id="scheme-modal">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModal()">&times;</button>
+      <div class="modal__badge" id="modal-badge"></div>
+      <h2 class="modal__title" id="modal-title"></h2>
+      <p class="modal__desc" id="modal-desc"></p>
+      <div class="modal__section">
+        <h4>💰 Benefits</h4>
+        <p id="modal-benefits"></p>
+      </div>
+      <div class="modal__section">
+        <h4>📋 Eligibility</h4>
+        <p id="modal-eligibility"></p>
+      </div>
+      <div class="modal__section">
+        <h4>📄 Documents Required</h4>
+        <ul id="modal-docs"></ul>
+      </div>
+      <a href="#" id="modal-link" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Apply Online →</a>
+    </div>
+  </div>
+
+  <!-- ===== CHATBOT ===== -->
+  <div class="chatbot-toggle" id="chatbot-toggle" onclick="toggleChat()">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </div>
+  <div class="chatbot" id="chatbot">
+    <div class="chatbot__header">
+      <span>💬 My Rights Assistant</span>
+      <button onclick="toggleChat()">&times;</button>
+    </div>
+    <div class="chatbot__messages" id="chat-messages">
+      <div class="chat-msg bot">Hi! I'm your My Rights Assistant. Tell me about yourself and I'll recommend suitable government schemes. For example: "I am a 22 year old student from Tamil Nadu"</div>
+    </div>
+    <div class="chatbot__input">
+      <input type="text" id="chat-input" placeholder="Type your message..." onkeydown="if(event.key==='Enter')sendChat()">
+      <button onclick="sendChat()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>My Rights</h3>
+          <p>Find Government Schemes You Are Eligible For.</p>
+          <p class="footer__tagline">Empowering citizens with knowledge about their rights and entitlements.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <a href="#" onclick="showPage('home')">Home</a>
+          <a href="#" onclick="showPage('eligibility')">Eligibility Checker</a>
+          <a href="#" onclick="showPage('all-schemes')">All Schemes</a>
+          <a href="#" onclick="showPage('about')">About</a>
+        </div>
+        <div class="footer__links">
+          <h4>Government Resources</h4>
+          <a href="https://www.myscheme.gov.in/" target="_blank">MyScheme Portal</a>
+          <a href="https://www.india.gov.in/" target="_blank">India.gov.in</a>
+          <a href="https://www.tn.gov.in/" target="_blank">Tamil Nadu Government</a>
+          <a href="https://scholarships.gov.in/" target="_blank">National Scholarship Portal</a>
+        </div>
+        <div class="footer__links">
+          <h4>Contact</h4>
+          <p>📧 support@myrights.in</p>
+          <p>📞 1800-XXX-XXXX</p>
+          <p>🏢 Chennai, Tamil Nadu, India</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 My Rights. All rights reserved. | This is an informational platform, not affiliated with any government body.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="schemes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
